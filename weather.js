@@ -10,9 +10,13 @@ windSpeed= document.querySelector(".windSpeed");
 
 
 async function checkWeather (city){
+    try{
     const response = await fetch(apiUrl+`${city}`+"&appid="+`${apiKey}`);
+    
     var data = await response.json();
     weatherIcon.src = `icon-img/${data.weather[0].icon}@2x.png`;
+
+    console.log(data);
 
     humidityIcon.src = `humidity.png`;
 
@@ -25,6 +29,14 @@ async function checkWeather (city){
     document.querySelector(".humidity").innerHTML="Humidity: "+data.main.humidity.toString()+"%";
 
     document.querySelector(".wind-speed").innerHTML="Wind Speed: "+data.wind.speed.toString()+"m/s";
+    }
+    catch(err){
+        if(city.toLowerCase() == "prayagraj"){
+            document.querySelector(".cityresponse").innerHTML="Curently Prayagraj's data is not available. We are working on it.";    
+        }else{
+        document.querySelector(".cityresponse").innerHTML="Please enter valid city name";
+    }
+    }
 
 
 }
@@ -32,6 +44,6 @@ async function checkWeather (city){
 
 const buttonElement = document.querySelector(".get-btn");
 buttonElement.addEventListener("click",()=>{
-city = document.querySelector(".cityname").value;
-checkWeather(city);
+    city = document.querySelector(".cityname").value;
+    checkWeather(city);
 });
