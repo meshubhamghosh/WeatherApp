@@ -1,0 +1,86 @@
+body{
+    background-color: black;
+}
+h1 {
+    display: block;
+    font-size: 5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align: center;
+    color:mintcream;
+  }
+  h4 {
+    text-align: center;
+    color: darkseagreen;
+  }
+  
+.weatherdiv{
+  width: 80%;
+  max-width: 50em;
+  background: linear-gradient(135deg,  #feba, #5b548a);
+  color: #fff;
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+}
+.weatherSearch{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.weatherSearch input{
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color:#555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  font-size: larger;
+}
+.weatherSearch button{
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50em;
+}
+.weatherSearch button img{
+  width: 50px;
+}
+
+.cityname {
+  border-radius: 50em;
+  size: 500px;
+  border: none;
+  margin-top: 1em;
+  margin-right: 1px;
+  padding: 10px;
+}
+.value{
+  font-weight: bold;
+}
+
+.value{
+  font-size:1.5em;
+  color:antiquewhite;
+  font-size: 40px;
+}
+.cityresponse{
+  font-size: 70px;;
+}
+.citytemp{
+  font-size: 60px;
+}
+.h-w{
+  display:inline-table;
+}
